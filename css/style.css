@@ -207,7 +207,7 @@ a {
     margin-bottom: 46px;
 }
 
-.header__container-wrapper {
+.header__container--wrapper {
     display: flex;
 }
 
@@ -779,7 +779,7 @@ ul .header__purchases-active {
 
 /* Navigation block */
 
-.main-navigation {
+.main__navigation {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
   font-size: 13px;
@@ -787,41 +787,41 @@ ul .header__purchases-active {
   color: var(--basic-black);
 }
 
-.main-navigation ul {
+.main__navigation ul {
   display: flex;
 }
 
-.main-navigation a {
+.main__navigation a {
   padding-right: 17px;
   text-transform: uppercase;
   color: inherit;
 }
 
-.main-navigation a::after {
+.main__navigation a::after {
   content: url(/img/icon-right-small.svg);
   padding-left: 15px;
 }
 
-li .main-navigation__link::after {
+li .main__navigation__link::after {
   content: none;
 }
 
 /* Sidebar block */
 
-.products__hidden {
+.products__heading {
   font-size: 30px;
   font-weight: normal;
   line-height: 30px;
   text-transform: uppercase;
 }
 
-.main-wrapper {
+.sidebar__wrapper {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: min-content auto;
 }
 
-.main-sidebar {
+.sidebar {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
   font-size: 13px;
@@ -831,7 +831,7 @@ li .main-navigation__link::after {
   grid-row: 1/3;
 }
 
-.main-sidebar fieldset {
+.sidebar fieldset {
   width: 220px;
   border: none;
   display: flex;
@@ -839,19 +839,19 @@ li .main-navigation__link::after {
 
 }
 
-.sidebar__hidden {
+.sidebar__heading {
   font-size: 13px;
   text-transform: uppercase;
 }
 
-.sidebar__search-form legend {
+.search-form legend {
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
 }
 
-.serach-form__price input {
+.search-form__price input {
   font-size: 17px;
   line-height: 18px;
   text-align: center;
@@ -880,7 +880,7 @@ li .main-navigation__link::after {
   background-color: var(--background-catalog);
 }
 
-.filter__hidden {
+.filter__heading {
   font-size: 13px;
   font-weight: normal;
   text-transform: uppercase;
@@ -947,7 +947,7 @@ li .active-element {
   border: 1px solid var(--basic-red);
 }
 
-li .pages__list-first {
+li .pages__list--first {
   background-color: var(--basic-red);
   border: none;
   color: var(--basic-white);
@@ -955,7 +955,7 @@ li .pages__list-first {
 
 /* Features block */
 
-.features__hidden {
+.features__heading {
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
