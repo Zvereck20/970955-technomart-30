@@ -148,18 +148,18 @@ a {
 .user-navigation__order,
 .header__navigation ul,
 .products__item,
-.goods-cards__item,
+.goods-cards__list,
 .manufacturers__list,
 .service ul,
 .company__list,
 .information__company-list,
 .information__assortiment,
 .copyright__socials,
-.main-navigation ul,
+.breadcrumbs ul,
 .filter__list,
 .pages__list,
 .modal ul,
-.modal__basket ul {
+.modal-basket ul {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -779,7 +779,7 @@ ul .header__purchases-active {
 
 /* Navigation block */
 
-.main__navigation {
+.breadcrumbs {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
   font-size: 13px;
@@ -787,22 +787,22 @@ ul .header__purchases-active {
   color: var(--basic-black);
 }
 
-.main__navigation ul {
+.breadcrumbs ul {
   display: flex;
 }
 
-.main__navigation a {
+.breadcrumbs a {
   padding-right: 17px;
   text-transform: uppercase;
   color: inherit;
 }
 
-.main__navigation a::after {
+.breadcrumbs a::after {
   content: url(/img/icon-right-small.svg);
   padding-left: 15px;
 }
 
-li .main__navigation__link::after {
+li .breadcrumbs__link::after {
   content: none;
 }
 
@@ -915,7 +915,7 @@ li .active-element {
 
 /* Good cards block */
 
-.goods-cards__item {
+.goods-cards__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -971,7 +971,7 @@ li .pages__list--first {
 
 /* modal window */
 
-.modal__basket p {
+.modal-basket p {
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
