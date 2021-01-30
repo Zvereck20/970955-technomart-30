@@ -1,30 +1,30 @@
 /* Fonts Cuprum  */
 
 @font-face {
-    font-family: 'Cuprum';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Cuprum Regular'), local('Cuprum-Regular'),
-         url('../fonts/cuprum.woff2') format('woff2'),
-         url('../fonts/cuprum.woff') format('woff');
-  }
+  font-family: 'Cuprum';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cuprum Regular'), local('Cuprum-Regular'),
+    url('../fonts/cuprum.woff2') format('woff2'),
+    url('../fonts/cuprum.woff') format('woff');
+}
 
 @font-face {
-    font-family: 'Cuprum';
-    font-style: normal;
-    font-weight: 700;
-    src: local('Cuprum Bold'), local('Cuprum-Bold'),
-         url('../fonts/cuprumbold.woff2') format('woff2'),
-         url('../fonts/cuprumbold.woff') format('woff');
-  }
+  font-family: 'Cuprum';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Cuprum Bold'), local('Cuprum-Bold'),
+    url('../fonts/cuprumbold.woff2') format('woff2'),
+    url('../fonts/cuprumbold.woff') format('woff');
+}
 
 @font-face {
   font-family: 'Cuprum';
   font-style: italic;
   font-weight: 700;
   src: local('Cuprum Bold Italic'), local('Cuprum-BoldItalic'),
-       url('../fonts/cuprumbolditalic.woff2') format('woff2'),
-       url('../fonts/cuprumbolditalic.woff') format('woff');
+    url('../fonts/cuprumbolditalic.woff2') format('woff2'),
+    url('../fonts/cuprumbolditalic.woff') format('woff');
 }
 
 @font-face {
@@ -32,9 +32,10 @@
   font-style: italic;
   font-weight: 400;
   src: local('Cuprum Italic'), local('Cuprum-Italic'),
-       url('../fonts/cuprumitalic.woff2') format('woff2'),
-       url('../fonts/cuprumitalic.woff') format('woff');
+    url('../fonts/cuprumitalic.woff2') format('woff2'),
+    url('../fonts/cuprumitalic.woff') format('woff');
 }
+
 /* PT Sans */
 
 @font-face {
@@ -42,8 +43,8 @@
   font-style: normal;
   font-weight: 400;
   src: local('PT Sans'), local('PTSans-Regular'),
-       url('../fonts/ptsans.woff2') format('woff2'),
-       url('../fonts/ptsans.woff') format('woff');
+    url('../fonts/ptsans.woff2') format('woff2'),
+    url('../fonts/ptsans.woff') format('woff');
 }
 
 @font-face {
@@ -51,8 +52,8 @@
   font-style: normal;
   font-weight: 700;
   src: local('PT Sans Bold'), local('PTSans-Bold'),
-       url('../fonts/ptsansbold.woff2') format('woff2'),
-       url('../fonts/ptsansbold.woff') format('woff');
+    url('../fonts/ptsansbold.woff2') format('woff2'),
+    url('../fonts/ptsansbold.woff') format('woff');
 }
 
 /* variables */
@@ -65,18 +66,18 @@
   --light-grey: #F3F7F9;
   --light-grey-link: #C5C5C5;
   --dark-grey: #c7c7c7;
-  --dark-grey-link:#A9A9A9;
+  --dark-grey-link: #A9A9A9;
 
   --basic-white: #FFFFFF;
   --white-opacity: rgba(255, 255, 255, 0.5);
   --footer-link-white: #F1F5F7;
 
   --basic-black: #000000;
-  --light-black: rgba(0,0,0,0.3);
+  --light-black: rgba(0, 0, 0, 0.3);
 
 
   --basic-green: #63A63E;
-  --green-link:  #5FBB2D;
+  --green-link: #5FBB2D;
   --green-active: #518534;
   --green-shadow: #367315;
 
@@ -172,110 +173,110 @@ a {
 }
 
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 
 /* Header basic style */
 
 .header {
-    color: var(--basic-white);
-    background-color: var(--light-grey);
-    font-size: 18px;
-    line-height: 24px;
+  color: var(--basic-white);
+  background-color: var(--light-grey);
+  font-size: 18px;
+  line-height: 24px;
 
-    display: grid;
-    grid-template-rows: min-content 1fr min-content;
-    margin-bottom: 60px;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  margin-bottom: 60px;
 }
 
 .header svg {
-    fill: var(--light-grey-link);
+  fill: var(--light-grey-link);
 }
 
- .header__container {
-    background-color: var(--background-dark);
-    margin-bottom: 46px;
+.header__container {
+  background-color: var(--background-dark);
+  margin-bottom: 46px;
 }
 
 .header__container--wrapper {
-    display: flex;
+  display: flex;
 }
 
 .header__logo {
-    width: 220px;
-    height: 47px;
-    margin-bottom: -5px;
-    display: flex;
-    font-size: 30px;
-    line-height: 30px;
-    text-transform: uppercase;
-    color: var(--basic-white);
-    background-color: var(--basic-red);
-    box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  width: 220px;
+  height: 47px;
+  margin-bottom: -5px;
+  display: flex;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
 
 .header__logo svg {
-    width: 106px;
-    height: 17px;
-    margin: auto;
-    margin-top: 13px;
+  width: 106px;
+  height: 17px;
+  margin: auto;
+  margin-top: 13px;
 }
 
 .header__search {
-    margin: auto;
-    padding-left: 19px;
+  margin: auto;
+  padding-left: 19px;
 }
 
 .header__purchases {
-    display: flex;
-    margin: auto;
+  display: flex;
+  margin: auto;
 }
 
 .header__purchases li {
-    padding: 9px 19px;
+  padding: 9px 19px;
 }
 
 .header__purchases-order {
-    padding: 11px 19px;
+  padding: 11px 19px;
 }
 
 .header__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .header__heading {
-    font-style: italic;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 23px;
-    color: var(--basic-red);
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--basic-red);
 }
 
 .header__copyright p {
-    font-size: 14px;
-    color: var(--basic-black);
+  font-size: 14px;
+  color: var(--basic-black);
 }
 
 .header__navigation {
-    align-items: center;
-    background-color: var(--background-light);
+  align-items: center;
+  background-color: var(--background-light);
 }
 
 .header__navigation ul {
-    display: flex;
-    justify-content: space-between;
-    margin: 16px 53px 20px 53px;
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 53px 20px 53px;
 }
 
 /* Header links */
@@ -287,7 +288,7 @@ a {
 }
 
 .header__purchases a:active {
-  background-color:var(--background-link);
+  background-color: var(--background-link);
   color: var(--white-opacity);
 }
 
@@ -307,7 +308,7 @@ a {
   background-color: var(--green-link);
 }
 
- ul .header__purchases-order:active {
+ul .header__purchases-order:active {
   background-color: var(--basic-green);
   color: var(--white-opacity);
 }
@@ -490,6 +491,7 @@ a {
   border-radius: 2px;
   opacity: 0.5;
 }
+
 .button-bookmark:focus {
   border: 3px solid var(--background-light);
   border-radius: 2px;
@@ -521,9 +523,25 @@ a {
 
 /* Service block */
 
+/* .service__wrap {
+  background-color: var(--footer-link-white);
+} */
+
 .service {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  position: relative;
+}
+
+.service::after {
+  content: "";
+  position: absolute;
+  width: 468px;
+  height: 261px;
+  right: 0;
+  bottom: 0;
+  background-image: url("../img/delivery-truck.svg");
+  z-index: -1;
 }
 
 .service p {
@@ -629,7 +647,7 @@ li .service__list--active {
   color: var(--light-grey);
 }
 
-.information__copyright a{
+.information__copyright a {
   color: inherit;
 }
 
@@ -771,7 +789,7 @@ ul .header__purchases-active {
   color: var(--basic-red);
 }
 
-.user-navigation__order a:active{
+.user-navigation__order a:active {
   color: var(--light-grey-link);
 }
 
@@ -898,7 +916,7 @@ li .breadcrumbs__link::after {
   margin: 0 35px;
 }
 
-.filter__list a[href="blank.html"]:hover{
+.filter__list a[href="blank.html"]:hover {
   color: var(--basic-black);
   border-bottom: 2px solid var(--basic-red);
 }
