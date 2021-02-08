@@ -153,7 +153,7 @@ a {
 .manufacturers__list,
 .service ul,
 .company__list,
-.information__company-list,
+.information__company--list,
 .information__assortiment,
 .copyright__socials,
 .breadcrumbs ul,
@@ -376,6 +376,7 @@ ul .header__purchases-order:active {
 
 .aside__list-materials {
   background-color: var(--block-materials);
+  position: relative;
 }
 
 .aside__list-instrument {
@@ -394,6 +395,16 @@ ul .header__purchases-order:active {
   background-color: var(--block-delivery);
 }
 
+.aside__list svg {
+  flex-grow: 1;
+}
+
+.marker-new {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .main__gallery {
   width: 620px;
   height: 266px;
@@ -405,6 +416,10 @@ ul .header__purchases-order:active {
 }
 
 /* Aside links */
+
+.aside__list a {
+  width: 50%;
+}
 
 .main__aside a {
   font-size: 14px;
@@ -643,6 +658,10 @@ li .service__list--active {
   margin: 37px 0 17px 69px;
 }
 
+.information__company--list a {
+  color: var(--footer-link-white);
+}
+
 .information__copyright {
   color: var(--light-grey);
 }
@@ -659,15 +678,15 @@ li .service__list--active {
 
 /* Copyright block */
 
-.copyright--wrapper {
+.copyright__wrapper {
   font-size: 16px;
   line-height: 18px;
   background-color: var(--background-dark);
 }
 
 .copyright {
-  display: grid;
-  grid-template-columns: 2fr 2fr 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
