@@ -205,7 +205,7 @@ a {
 
 .header__container {
   background-color: var(--background-dark);
-  margin-bottom: 46px;
+  margin-bottom: 44px;
 }
 
 .header__container--wrapper {
@@ -233,29 +233,47 @@ a {
 }
 
 .header__search {
-  margin: auto;
-  padding-left: 19px;
+  margin: auto 20px;
+}
+
+.header__search input {
+  border: none;
+  background-color: inherit;
 }
 
 .header__purchases {
   display: flex;
-  margin: auto;
+  margin-left: 9px;
 }
 
-.header__purchases li {
-  padding: 9px 19px;
-}
-
-.header__purchases-order {
+.header__purchases button {
   padding: 11px 19px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+}
+
+.header__purchases li:nth-of-type(1) button {
+  margin-right: 11px;
+}
+
+.header__purchases li:nth-of-type(2) button {
+  margin-right: 5px;
+}
+
+.header__purchases svg {
+  padding-right: 5px;
 }
 
 .header__wrapper {
+  padding-bottom: 29px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
 .header__heading {
+  margin: 0;
+  padding-left: 29px;
   font-style: italic;
   font-weight: normal;
   font-size: 16px;
@@ -264,8 +282,37 @@ a {
 }
 
 .header__copyright p {
+  padding-left: 17px;
+  margin-top: 0;
   font-size: 14px;
   color: var(--basic-black);
+}
+
+.header__copyright svg {
+  padding-right: 10px;
+}
+
+.user-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 12px;
+  padding-left: 33px;
+}
+
+.user-navigation--enter {
+  padding: 11px 26px 11px 44px;
+  position: relative;
+}
+
+.user-navigation--registration {
+  padding: 11px 24px;
+}
+
+.user-navigation--enter svg {
+  position: absolute;
+  top: 16px;
+  left: 18px;
 }
 
 .header__navigation {
@@ -281,26 +328,26 @@ a {
 
 /* Header links */
 
-.header__purchases a,
+.header__purchases button,
 .header__navigation a,
 .aside__list a {
   color: inherit;
 }
 
-.header__purchases a:active {
+.header__purchases button:active {
   background-color: var(--background-link);
   color: var(--white-opacity);
 }
 
-.header__purchases a:hover svg {
+.header__purchases button:hover svg {
   fill: var(--basic-white);
 }
 
-.header__purchases a:active svg {
+.header__purchases button:active svg {
   fill: var(--light-grey-link);
 }
 
-.header__purchases-order {
+li .header__purchases--order {
   background-color: var(--basic-green);
 }
 
@@ -314,9 +361,15 @@ ul .header__purchases-order:active {
 }
 
 .header__copyright a {
+  display: inline-block;
+  padding: 6px 42px 6px 36px;
+  margin-left: 7px;
   font-size: 21px;
+  font-weight: bold;
   line-height: 30px;
   color: var(--basic-red);
+
+  border: 3px solid var(--basic-white);
 }
 
 .user-navigation a {
@@ -631,10 +684,10 @@ li .service__list--active {
   line-height: 24px;
 }
 
-.company__list li::before {
+/* .company__list li::before {
   content: ;
   /* сделать красную полосочку с помощью CSS  и абсолютного позиционрирования */
-}
+
 
 /* Footer basic style */
 
