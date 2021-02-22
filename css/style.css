@@ -201,6 +201,9 @@ a {
 
   display: grid;
   grid-template-rows: min-content 1fr min-content;
+}
+
+.header--index {
   margin-bottom: 118px;
 }
 
@@ -656,9 +659,7 @@ ul .header__purchases-order:active {
   color: var(--basic-black);
 }
 
-.products__item--old-price {
-
-}
+.products__item--old-price {}
 
 /* BFG 9000 */
 
@@ -965,15 +966,75 @@ li .service__list--active {
 
 /* Header */
 
+.header--catalog {
+  margin-bottom: 20px;
+  padding-bottom: 58px;
+}
+
 ul .header__purchases-active {
   background-color: var(--basic-red);
 }
 
+.user {
+  padding-left: 16px;
+  position: relative;
+}
+
+.user-navigation__name {
+  display: inline-flex;
+  background-color: var(--basic-white);
+}
+
 .user-navigation__name a {
+  display: block;
+  padding: 12px 0px 12px 55px;
   font-size: 21px;
   line-height: 21px;
   text-align: center;
   color: var(--basic-black);
+}
+
+.user-navigation__icon {
+  position: absolute;
+}
+
+.user-navigation__icon--login {
+  top: 14px;
+  left: 29px;
+}
+
+.user-navigation__icon--exit {
+  top: 15px;
+  right: 17px;
+}
+
+.user-navigation__order {
+  display: flex;
+  padding-left: 42px;
+  padding-top: 5px;
+  position: relative;
+}
+
+.user-navigation__order a {
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--background-light);
+}
+
+.user-navigation__order--link {
+  padding-left: 33px;
+}
+
+.user-navigation__order--link::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--background-light);
+  top: 15px;
+  right: 54%;
 }
 
 /* Header links */
@@ -994,12 +1055,6 @@ ul .header__purchases-active {
   fill: var(--light-grey-link);
 }
 
-.user-navigation__order a {
-  font-size: 16px;
-  line-height: 18px;
-  text-align: center;
-  color: var(--background-light);
-}
 
 .user-navigation__order a:hover {
   color: var(--basic-red);
