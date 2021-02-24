@@ -171,7 +171,8 @@ a {
   list-style: none;
 }
 
-.center-container {
+.container,
+.center-container>section {
   width: 940px;
   height: auto;
   margin: 0 auto;
@@ -204,7 +205,8 @@ a {
 }
 
 .header--index {
-  margin-bottom: 118px;
+  margin-bottom: 61px;
+  padding-bottom: 57px;
 }
 
 .header svg {
@@ -220,10 +222,7 @@ a {
   display: flex;
 }
 
-.header__logo {
-  width: 220px;
-  height: 47px;
-  margin-bottom: -5px;
+.logo {
   display: flex;
   font-size: 30px;
   line-height: 30px;
@@ -233,9 +232,13 @@ a {
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
 
-.header__logo svg {
-  width: 106px;
-  height: 17px;
+.header__logo {
+  width: 220px;
+  height: 47px;
+  margin-bottom: -5px;
+}
+
+.logo svg {
   margin: auto;
   margin-top: 13px;
 }
@@ -455,6 +458,7 @@ ul .header__purchases-order:active {
 .aside__list-materials {
   background-color: var(--block-materials);
   position: relative;
+  overflow: hidden;
 }
 
 .aside__list-materials a {
@@ -516,11 +520,22 @@ ul .header__purchases-order:active {
   padding-top: 22px;
 }
 
-.marker-new {
+.marker-new::after {
+  content: "new";
   position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
+  width: 100px;
+  padding: 5px 0;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  align-items: center;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  top: 12px;
+  right: -26px;
+  background-color: var(--basic-red);
+  transform: rotate(45deg);
 }
 
 .main__gallery {
@@ -638,6 +653,7 @@ ul .header__purchases-order:active {
 .products__item li {
   border: 1px solid var(--block-border);
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .products__item--wrapper {
@@ -649,6 +665,7 @@ ul .header__purchases-order:active {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  position: relative;
 }
 
 .products__item--link {
@@ -659,12 +676,44 @@ ul .header__purchases-order:active {
   color: var(--basic-black);
 }
 
-.products__item--old-price {}
+.products__item--old-price {
+  text-decoration-line: line-through;
+  color: var(--dark-grey-link);
+}
+
+.products__item--new-price {
+  display: block;
+  margin-top: 15px;
+  padding: 10px 28px 10px 33px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  position: relative;
+}
+
+.products__item--new-price::after {
+  content: "";
+  position: absolute;
+  right: -34px;
+  bottom: -1px;
+  border: 19.5px solid transparent;
+  border-left: 15px solid var(--basic-red);
+}
 
 /* BFG 9000 */
 
 .BFG9000-wrapper {
   padding-top: 10px;
+  padding-bottom: 17px;
+}
+
+.BFG3000-wrapper .products__item--img {
+  padding-bottom: 34px;
+  padding-top: 29px;
+}
+
+.BFG6000-wrapper .products__item--img {
+  padding-bottom: 18px;
+  padding-top: 29px;
 }
 
 .products__buttons {
@@ -734,16 +783,24 @@ ul .header__purchases-order:active {
   margin: auto;
 }
 
+.manufacturers__list img {
+  padding-top: 12px;
+}
+
+
 /* Service block */
 
-/* .service__wrap {
+.service__wrap {
+  width: 100%;
   background-color: var(--footer-link-white);
-} */
+}
 
 .service {
   display: grid;
   grid-template-columns: 1fr 2fr;
   position: relative;
+  padding-top: 46px;
+  padding-bottom: 100px;
 }
 
 .service::after {
@@ -754,7 +811,6 @@ ul .header__purchases-order:active {
   right: 0;
   bottom: 0;
   background-image: url("../img/delivery-truck.svg");
-  z-index: -1;
 }
 
 .service p {
@@ -775,12 +831,22 @@ ul .header__purchases-order:active {
   font-weight: normal;
 }
 
-.service a {
-  font-weight: bold;
+.service ul {
+  padding-top: 55px;
+}
+
+.service__list {
+  width: 240px;
+  height: 61px;
+  padding-left: 20px;
   font-size: 21px;
+  font-weight: bold;
   line-height: 30px;
+  text-align: left;
   color: var(--basic-white);
   background-color: var(--background-light);
+  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+  border: none;
 }
 
 .service__list:hover {
@@ -789,7 +855,13 @@ ul .header__purchases-order:active {
 
 li .service__list--active {
   color: var(--background-light);
-  background-color: inherit;
+  background-color: var(--basic-white);
+  box-shadow: 0px 1px 0px var(--basic-white);
+}
+
+.service__delivery--wrapper {
+  padding-top: 21px;
+  padding-left: 5px;
 }
 
 .service__delivery--wrapper h3 {
@@ -807,6 +879,17 @@ li .service__list--active {
 }
 
 /* Company block */
+
+.wrapper {
+  display: flex;
+  padding-top: 46px;
+  padding-top: 43px;
+  align-items: baseline;
+}
+
+.wrapper section {
+  width: 50%;
+}
 
 .company__heading,
 .contacts__heading {
@@ -829,19 +912,87 @@ li .service__list--active {
   line-height: 24px;
 }
 
-/* .company__list li::before {
-  content: ;
-  /* сделать красную полосочку с помощью CSS  и абсолютного позиционрирования */
+.company p:nth-of-type(1) {
+  margin-top: -3px;
+  margin-bottom: 26px;
+}
 
+.company p:nth-of-type(2) {
+  margin-bottom: 3px;
+}
+
+.company__list li {
+  padding-bottom: 13px;
+  padding-left: 37px;
+  position: relative;
+}
+
+.company__list li::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  top: 11px;
+  left: 0;
+  background-color: var(--basic-red);
+}
+
+.company__list li:last-child::before {
+  top: 7px;
+}
+
+.company__button {
+  width: 220px;
+  margin-top: 4px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-bottom: 72px;
+}
+
+.contacts iframe {
+  padding-top: 19px;
+  padding-bottom: 26px;
+}
+
+.contacts__heading {
+  align-self: center;
+  padding-right: 10px;
+  margin-bottom: 22px;
+}
+
+.contacts__text {
+  margin-top: 0;
+  align-self: center;
+  padding-left: 44px;
+}
+
+.contacts__button {
+  width: 300px;
+}
 
 /* Footer basic style */
 
+.footer__logo {
+  width: 220px;
+  height: 68px;
+}
+
+.footer__logo svg {
+  margin-top: 16px;
+}
+
 /* Information block */
+
 
 .information__wrapper {
   font-size: 18px;
   line-height: 24px;
   background-color: var(--background-light);
+  padding-bottom: 33px;
 }
 
 .information {
@@ -853,7 +1004,7 @@ li .service__list--active {
 .information__company--list {
   display: flex;
   justify-content: space-between;
-  margin: 37px 0 17px 69px;
+  margin: 37px 0 17px 71px;
 }
 
 .information__company--list a {
@@ -864,6 +1015,11 @@ li .service__list--active {
   color: var(--light-grey);
 }
 
+.information__copyright p {
+  margin: 0;
+  padding-top: 10px;
+}
+
 .information__copyright a {
   color: inherit;
 }
@@ -871,12 +1027,14 @@ li .service__list--active {
 .information__assortiment {
   display: flex;
   justify-content: space-between;
-  margin: 17px 0 0 92px;
+  margin: 17px 0 0 95px;
 }
 
 /* Copyright block */
 
 .copyright__wrapper {
+  padding-top: 21px;
+  padding-bottom: 20px;
   font-size: 16px;
   line-height: 18px;
   background-color: var(--background-dark);
@@ -889,12 +1047,26 @@ li .service__list--active {
 }
 
 .copyright__socials {
+  margin-left: 101px;
+  margin-top: 5px;
   display: flex;
   justify-content: center;
 }
 
 .copyright__socials svg {
   margin: auto;
+}
+
+.copyright__container--left {
+  padding-left: 62px;
+}
+
+.copyright__container--right {
+  padding-right: 12px;
+}
+
+.copyright__container--link {
+  color: var(--footer-text-color);
 }
 
 .copyright__text,
@@ -904,17 +1076,22 @@ li .service__list--active {
   color: var(--basic-white);
 }
 
+.copyright__container--logo {
+  margin: 0;
+}
+
 /* Footer links */
 
-.information__company-list a {
+
+.information__company--list a {
   color: var(--footer-link-white);
 }
 
-.information__company-list a:hover {
+.information__company--list a:hover {
   text-decoration: underline;
 }
 
-.information__company-list a:active {
+.information__company--list a:active {
   opacity: 0.5;
 }
 
@@ -944,18 +1121,16 @@ li .service__list--active {
   background-color: var(--basic-red);
 }
 
-.copyright__container-link {
-  color: var(--footer-text-color);
-}
-
-.copyright__container-link:hover {
+.copyright__container--link:hover {
   text-decoration: underline;
 }
 
-.copyright__container-link:active {
+.copyright__container--link:active {
   color: var(--basic-red);
   text-decoration: none;
 }
+
+
 
 /* Modal window */
 
@@ -971,8 +1146,13 @@ li .service__list--active {
   padding-bottom: 58px;
 }
 
-ul .header__purchases-active {
+ul .header__purchases--active {
   background-color: var(--basic-red);
+}
+
+.header--catalog .header__purchases li:nth-of-type(2) button {
+  margin-right: 0;
+  margin-left: 9px;
 }
 
 .user {
@@ -1097,12 +1277,16 @@ li .breadcrumbs__link::after {
 
 /* Sidebar block */
 
-/* .products__heading {
+.main__heading {
+  display: block;
+  padding: 29px;
+  margin-bottom: 18px;
   font-size: 30px;
   font-weight: normal;
   line-height: 30px;
   text-transform: uppercase;
-} */
+  background-color: var(--footer-link-white);
+}
 
 .sidebar__wrapper {
   display: grid;
@@ -1111,6 +1295,7 @@ li .breadcrumbs__link::after {
 }
 
 .sidebar {
+  width: 200px;
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
   font-size: 13px;
@@ -1155,8 +1340,6 @@ li .breadcrumbs__link::after {
 }
 
 /* Filter block */
-
-/* пределать active-element сделать текстом и поубирать a[href="blank.html"]  */
 
 .filter {
   min-width: 700px;
