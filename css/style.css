@@ -81,6 +81,9 @@
   --green-active: #518534;
   --green-shadow: #367315;
 
+  --switch-active-color: #00ca74;
+  --switch-nonactive-color: #D7DCDE;
+
   --background-light: #32425C;
   --background-dark: #293449;
   --background-link: #161D29;
@@ -1347,20 +1350,50 @@ li .breadcrumbs__link::after {
 }
 
 .price__switch {
-  width: 220px;
+  width: 180px;
   height: 80px;
   margin-top: 9px;
   margin-bottom: 3px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
+  position: relative;
 
   background-color: var(--background-catalog);
 }
 
-.switch {
-  width: 100%;
-  background-color: green;
-  appearance: none;
+.price__switch::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 22px;
+  background-image: url('../img/filter-button.svg');
+  background-repeat: no-repeat;
+  top: 29px;
+  left: 15px;
+}
+
+.price__switch::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 22px;
+  background-image: url('../img/filter-button.svg');
+  background-repeat: no-repeat;
+  top: 29px;
+  right: 41px;
+}
+
+.switch--active {
+  width: 80%;
+  height: 2px;
+  background-color: var(--switch-active-color);
+}
+
+.switch--notactive {
+  width: 20%;
+  height: 2px;
+  background-color: var(--switch-nonactive-color);
 }
 
 .price__number {
@@ -1407,8 +1440,8 @@ li .breadcrumbs__link::after {
 }
 
 .search-form__manufacturers {
-  margin-top: 11px;
-  padding-bottom: 12px;
+  margin-top: 14px;
+  padding-bottom: 6px;
 }
 
 .search-form__manufacturers legend {
@@ -1416,33 +1449,34 @@ li .breadcrumbs__link::after {
 }
 
 .search-form__manufacturers label {
-  padding-bottom: 19px;
+  padding-bottom: 21px;
 }
 
-.search-form__manufacturers input+label:before {
+.search-form__manufacturers input+label::before {
   content: "";
   position: absolute;
   width: 23px;
   height: 23px;
   background-repeat: no-repeat;
   background-image: url("../img/checkbox-off.svg");
-  top: -1px;
+  top: -3px;
   left: -2px;
 }
 
-.search-form__manufacturers input:checked+label:after {
+.search-form__manufacturers input:checked+label::before {
   content: "";
   position: absolute;
   width: 23px;
   height: 23px;
   background-repeat: no-repeat;
   background-image: url("../img/checkbox-on.svg");
-  top: -1px;
+  top: -3px;
   left: -2px;
 }
 
 .sidebar .search-form__feeding {
   margin-top: 17px;
+  padding-bottom: 14px;
   border-bottom: none;
 }
 
@@ -1465,7 +1499,7 @@ li .breadcrumbs__link::after {
   left: -2px;
 }
 
-.search-form__feeding input:checked+label::after {
+.search-form__feeding input:checked+label::before {
   content: "";
   position: absolute;
   width: 25px;
