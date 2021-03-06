@@ -32,7 +32,7 @@
         </label>
         <ul class="header__purchases">
           <li>
-            <button type="button">
+            <button class="purchases" type="button">
               <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M14 15C14 15.55 13.632 15.741 13.182 15.426L7.819 11.661C7.369 11.346 6.632 11.346 6.182 11.661L0.818 15.426C0.368 15.741 0 15.55 0 15V1C0 0.45 0.45 0 1 0H13C13.55 0 14 0.45 14 1V15Z" />
@@ -260,7 +260,7 @@
           <h2 class="visually-hidden">карточки товаров</h2>
           <ul class="goods-cards__list products__item">
             <li>
-              <article class="item__wrapper BFG6000-wrapper">
+              <article class="item__wrapper">
                 <a class="item__img" href="blank.html">
                   <img src="img/bosh bfg 6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
                 </a>
@@ -274,7 +274,7 @@
               </article>
             </li>
             <li>
-              <article class="item__wrapper BFG6000-wrapper">
+              <article class="item__wrapper">
                 <a class="item__img" href="blank.html">
                   <img src="img/bosh bfg 6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
                 </a>
@@ -288,7 +288,7 @@
               </article>
             </li>
             <li>
-              <article class="item__wrapper marker-new BFG6000-wrapper">
+              <article class="item__wrapper marker-new">
                 <a class="item__img" href="blank.html">
                   <img src="img/bosh bfg 6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
                 </a>
@@ -302,7 +302,7 @@
               </article>
             </li>
             <li>
-              <article class="item__wrapper marker-new BFG3000-wrapper">
+              <article class="item__wrapper marker-new">
                 <a class="item__img" href="blank.html">
                   <img src="img/bosh bfg 3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
                 </a>
@@ -316,7 +316,7 @@
               </article>
             </li>
             <li>
-              <article class="item__wrapper BFG6000-wrapper">
+              <article class="item__wrapper">
                 <a class="item__img" href="blank.html">
                   <img src="img/bosh bfg 6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
                 </a>
@@ -330,7 +330,7 @@
               </article>
             </li>
             <li>
-              <article class="item__wrapper marker-new BFG2000-wrapper">
+              <article class="item__wrapper marker-new one-price">
                 <a class="item__img" href="blank.html">
                   <img src="img/bosh bfg 2000.jpg" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
                 </a>
@@ -343,7 +343,7 @@
               </article>
             </li>
             <li>
-              <article class="item__wrapper marker-new BFG3000-wrapper">
+              <article class="item__wrapper marker-new">
                 <a class="item__img" href="blank.html">
                   <img src="img/bosh bfg 3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
                 </a>
@@ -357,7 +357,7 @@
               </article>
             </li>
             <li>
-              <article class="item__wrapper BFG6000-wrapper">
+              <article class="item__wrapper">
                 <a class="item__img" href="blank.html">
                   <img src="img/bosh bfg 6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
                 </a>
@@ -371,7 +371,7 @@
               </article>
             </li>
             <li>
-              <article class="item__wrapper marker-new BFG2000-wrapper">
+              <article class="item__wrapper marker-new one-price">
                 <a class="item__img" href="blank.html">
                   <img src="img/bosh bfg 2000.jpg" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
                 </a>
@@ -389,13 +389,13 @@
               <a class="pages__item pages__item--active" href="#">1</a>
             </li>
             <li>
-              <a href="blank.html">2</a>
+              <a class="pages__item" href="blank.html">2</a>
             </li>
             <li>
-              <a href="blank.html">3</a>
+              <a class="pages__item" href="blank.html">3</a>
             </li>
             <li>
-              <a href="blank.html">следующая</a>
+              <a class="pages__item" href="blank.html">следующая</a>
             </li>
           </ul>
         </section>
@@ -514,7 +514,7 @@
     </div>
   </footer>
 
-  <section class="modal__basket">
+  <section class="modal__basket visually-hidden">
     <h2 class="visually-hidden">Корзина</h2>
     <p>Товар добавлен в корзину!</p>
     <ul>
@@ -530,6 +530,7 @@
     </ul>
   </section>
 
+  <script src="/js/catalog.js"></script>
 </body>
 
 </html>
