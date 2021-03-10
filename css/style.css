@@ -1375,6 +1375,7 @@ li .service__list--active:hover {
 
 .modal__map iframe {
   width: 100%;
+  border: 0;
 }
 
 .map__close {
