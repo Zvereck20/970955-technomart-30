@@ -589,10 +589,6 @@ ul .purchases--order:active {
 }
 
 .gallery__img {
-  width: 620px;
-  height: 266px;
-  background-image: url("../img/slider.png");
-  background-repeat: no-repeat;
   position: absolute;
   z-index: -1;
 }
@@ -825,7 +821,7 @@ ul .purchases--order:active {
 /*Products state  */
 
 .products__item li:hover {
-  height: 319px;
+  height: 327px;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -1008,7 +1004,6 @@ li .service__list--active:hover {
 .wrapper {
   display: flex;
   padding-top: 46px;
-  padding-top: 43px;
   align-items: baseline;
 }
 
@@ -1038,7 +1033,6 @@ li .service__list--active:hover {
 }
 
 .company p:nth-of-type(1) {
-  margin-top: -3px;
   margin-bottom: 26px;
 }
 
@@ -1080,7 +1074,7 @@ li .service__list--active:hover {
 
 .contacts__img {
   padding-top: 19px;
-  padding-bottom: 26px;
+  padding-bottom: 29px;
   cursor: pointer;
 }
 
@@ -1236,6 +1230,7 @@ li .service__list--active:hover {
 .copyright__socials a {
   width: 44px;
   height: 44px;
+  margin-right: 2px;
   display: flex;
   border: 1px solid var(--background-socilal);
   border-radius: 50%;
@@ -1263,7 +1258,7 @@ li .service__list--active:hover {
   height: 430px;
   position: absolute;
   bottom: 11%;
-  left: 23.5%;
+  transform: translate(45%);
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -1330,6 +1325,7 @@ li .service__list--active:hover {
 }
 
 .bottom-border {
+  height: 115px;
   background-color: var(--background-modal);
   display: flex;
 }
@@ -1361,7 +1357,7 @@ li .service__list--active:hover {
   height: 449px;
   position: absolute;
   bottom: 325px;
-  left: 122px;
+  transform: translate(14%);
   background-color: var(--basic-white);
   border-top: 7px solid var(--modal-line);
   filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
