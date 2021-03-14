@@ -1,59 +1,59 @@
 /* Fonts Cuprum  */
 
 @font-face {
-  font-family: 'Cuprum';
+  font-family: "Cuprum";
   font-style: normal;
   font-weight: 400;
-  src: local('Cuprum Regular'), local('Cuprum-Regular'),
-    url('../fonts/cuprum.woff2') format('woff2'),
-    url('../fonts/cuprum.woff') format('woff');
+  src: local("Cuprum Regular"), local("Cuprum-Regular"),
+    url("../fonts/cuprum.woff2") format("woff2"),
+    url("../fonts/cuprum.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Cuprum';
+  font-family: "Cuprum";
   font-style: normal;
   font-weight: 700;
-  src: local('Cuprum Bold'), local('Cuprum-Bold'),
-    url('../fonts/cuprumbold.woff2') format('woff2'),
-    url('../fonts/cuprumbold.woff') format('woff');
+  src: local("Cuprum Bold"), local("Cuprum-Bold"),
+    url("../fonts/cuprumbold.woff2") format("woff2"),
+    url("../fonts/cuprumbold.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Cuprum';
+  font-family: "Cuprum";
   font-style: italic;
   font-weight: 700;
-  src: local('Cuprum Bold Italic'), local('Cuprum-BoldItalic'),
-    url('../fonts/cuprumbolditalic.woff2') format('woff2'),
-    url('../fonts/cuprumbolditalic.woff') format('woff');
+  src: local("Cuprum Bold Italic"), local("Cuprum-BoldItalic"),
+    url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+    url("../fonts/cuprumbolditalic.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Cuprum';
+  font-family: "Cuprum";
   font-style: italic;
   font-weight: 400;
-  src: local('Cuprum Italic'), local('Cuprum-Italic'),
-    url('../fonts/cuprumitalic.woff2') format('woff2'),
-    url('../fonts/cuprumitalic.woff') format('woff');
+  src: local("Cuprum Italic"), local("Cuprum-Italic"),
+    url("../fonts/cuprumitalic.woff2") format("woff2"),
+    url("../fonts/cuprumitalic.woff") format("woff");
 }
 
 /* PT Sans */
 
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: local('PT Sans'), local('PTSans-Regular'),
-    url('../fonts/ptsans.woff2') format('woff2'),
-    url('../fonts/ptsans.woff') format('woff');
+  src: local("PT Sans"), local("PTSans-Regular"),
+    url("../fonts/ptsans.woff2") format("woff2"),
+    url("../fonts/ptsans.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: local('PT Sans Bold'), local('PTSans-Bold'),
-    url('../fonts/ptsansbold.woff2') format('woff2'),
-    url('../fonts/ptsansbold.woff') format('woff');
+  src: local("PT Sans Bold"), local("PTSans-Bold"),
+    url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
 }
 
 /* variables */
@@ -114,7 +114,7 @@
 }
 
 .body {
-  min-width: 1200px;
+  min-width: 960px;
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -352,6 +352,7 @@ a {
 .header__navigation a {
   display: inline-block;
   padding: 16px 24px 20px 27px;
+  vertical-align: middle;
 }
 
 .header__navigation li:first-of-type a {
@@ -422,6 +423,7 @@ ul .purchases--order:active {
   font-size: 21px;
   font-weight: bold;
   line-height: 30px;
+  vertical-align: middle;
   color: var(--basic-red);
 
   border: 3px solid var(--basic-white);
@@ -637,6 +639,7 @@ ul .purchases--order:active {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  vertical-align: middle;
   background-color: var(--white-opacity);
 }
 
@@ -787,6 +790,7 @@ ul .purchases--order:active {
   display: flex;
   align-items: center;
   justify-content: center;
+  vertical-align: middle;
   color: var(--basic-white);
   background-color: var(--basic-green);
   box-shadow: inset 0px -3px 0px var(--green-shadow);
@@ -794,11 +798,11 @@ ul .purchases--order:active {
 }
 
 .item__button--buy::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 15px;
   height: 15px;
-  background-image: url('../img/icon-cart.svg');
+  background-image: url("../img/icon-cart.svg");
   background-repeat: no-repeat;
   opacity: 0.3;
   top: 11px;
@@ -912,16 +916,6 @@ ul .purchases--order:active {
   padding-bottom: 100px;
 }
 
-.service::after {
-  content: "";
-  position: absolute;
-  width: 468px;
-  height: 261px;
-  right: 0;
-  bottom: 0;
-  background-image: url("../img/delivery-truck.svg");
-}
-
 .service p {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
@@ -963,6 +957,38 @@ ul .purchases--order:active {
   background-color: var(--background-dark);
   box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
   outline: none;
+}
+
+.service__list--delivery::after {
+  content: "";
+  position: absolute;
+  width: 468px;
+  height: 261px;
+  right: 0;
+  bottom: 0;
+  background-image: url("../img/service__delivery.svg");
+}
+
+.service__list--gurantee::after {
+  content: "";
+  position: absolute;
+  display: none;
+  width: 468px;
+  height: 261px;
+  right: 0;
+  bottom: 0;
+  background-image: url("../img/service__gurantee.svg");
+}
+
+.service__list--credit::after {
+  content: "";
+  position: absolute;
+  display: none;
+  width: 468px;
+  height: 261px;
+  right: 0;
+  bottom: 0;
+  background-image: url("../img/service__credit.svg");
 }
 
 li .service__list--active {
@@ -1353,7 +1379,7 @@ li .service__list--active:hover {
   height: 21px;
   top: 14px;
   right: 12px;
-  background-image: url('../img/icon-close.svg');
+  background-image: url("../img/icon-close.svg");
   background-repeat: no-repeat;
   border: none;
   outline: none;
@@ -1384,7 +1410,7 @@ li .service__list--active:hover {
   height: 21px;
   top: 10px;
   right: 9px;
-  background-image: url('../img/icon-close.svg');
+  background-image: url("../img/icon-close.svg");
   background-repeat: no-repeat;
   border: none;
   outline: none;
@@ -1611,11 +1637,11 @@ li .breadcrumbs__link::after {
 }
 
 .price__switch::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 20px;
   height: 22px;
-  background-image: url('../img/filter-button.svg');
+  background-image: url("../img/filter-button.svg");
   background-repeat: no-repeat;
   top: 29px;
   left: 15px;
@@ -1623,11 +1649,11 @@ li .breadcrumbs__link::after {
 }
 
 .price__switch::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 20px;
   height: 22px;
-  background-image: url('../img/filter-button.svg');
+  background-image: url("../img/filter-button.svg");
   background-repeat: no-repeat;
   top: 29px;
   right: 41px;
@@ -1987,11 +2013,11 @@ li .pages__item--active:hover {
 }
 
 .modal__basket p::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 66px;
   height: 66px;
-  background-image: url('../img/icon-mark.svg');
+  background-image: url("../img/icon-mark.svg");
   background-repeat: no-repeat;
   top: 27px;
   left: 81px;
@@ -2028,7 +2054,7 @@ li .pages__item--active:hover {
   height: 21px;
   top: 13px;
   right: 11px;
-  background-image: url('../img/icon-close.svg');
+  background-image: url("../img/icon-close.svg");
   background-repeat: no-repeat;
   border: none;
   outline: none;
