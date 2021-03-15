@@ -959,35 +959,26 @@ ul .purchases--order:active {
   outline: none;
 }
 
-.service__list--delivery::after {
+.service__list::after {
   content: "";
   position: absolute;
   width: 468px;
   height: 261px;
   right: 0;
   bottom: 0;
+}
+
+.service__list--delivery::after {
   background-image: url("../img/service__delivery.svg");
 }
 
 .service__list--gurantee::after {
-  content: "";
-  position: absolute;
   display: none;
-  width: 468px;
-  height: 261px;
-  right: 0;
-  bottom: 0;
   background-image: url("../img/service__gurantee.svg");
 }
 
 .service__list--credit::after {
-  content: "";
-  position: absolute;
   display: none;
-  width: 468px;
-  height: 261px;
-  right: 0;
-  bottom: 0;
   background-image: url("../img/service__credit.svg");
 }
 
