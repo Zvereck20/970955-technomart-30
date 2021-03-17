@@ -253,10 +253,17 @@ a {
 }
 
 .header__search {
-  padding: 9.5px 20px;
+  position: relative;
+}
+
+.header__search svg {
+  position: absolute;
+  top: 12px;
+  left: 17px;
 }
 
 .header__search input {
+  padding: 11px 78px 11px 41px;
   border: none;
   background-color: inherit;
   outline: none;
@@ -268,7 +275,6 @@ a {
 
 .header__purchases {
   display: flex;
-  margin-left: 53px;
 }
 
 .purchases {
@@ -349,6 +355,7 @@ a {
 
 .header__navigation ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   box-shadow: inset 0px -5px 0px var(--background-dark);
 }
@@ -375,14 +382,14 @@ a {
   color: inherit;
 }
 
-.header__search:focus,
-.header__search:hover,
-.header__search input:focus {
+.header__search input:focus,
+.header__search input:hover {
   background-color: var(--basic-white);
   color: var(--basic-black);
 }
 
-.header__search:hover svg {
+.header__search input:focus+svg,
+.header__search input:hover+svg {
   fill: var(--basic-red);
   opacity: 1;
 }
@@ -598,7 +605,8 @@ ul .purchases--order:active {
   position: relative;
   grid-column: 1/3;
   grid-row: 2/4;
-  border-color: var(--basic-black);
+  background-color: var(--basic-black);
+  z-index: -2;
 }
 
 .gallery__img {
@@ -836,7 +844,7 @@ ul .purchases--order:active {
 /*Products state  */
 
 .products__item li:hover {
-  height: 327px;
+  height: 320px;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -1010,6 +1018,7 @@ li .service__list--active:hover {
 .service__description {
   padding-top: 21px;
   padding-left: 5px;
+  z-index: 1;
 }
 
 .service__description h3 {
@@ -1763,6 +1772,8 @@ form .search-form__manufacturers label:hover::before {
   background-image: url("../img/checkbox-off-hover.svg");
 }
 
+
+
 form .search-form__manufacturers label:hover::after {
   background-image: url("../img/checkbox-on-hover.svg");
 }
@@ -1803,6 +1814,11 @@ form .search-form__feeding label:hover::before {
 
 form .search-form__feeding label:hover::after {
   background-image: url("../img/radio-on-hover.svg");
+}
+
+.search-form__manufacturers input:focus+label::before,
+.search-form__feeding input:focus+label::before {
+  border: 1px solid var(--basic-black);
 }
 
 .search-form__button {
